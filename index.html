@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#653a2a">
+    <meta name="description" content="خانه چرم؛ تعمیر تخصصی کفش، ترمیم چرم، تعویض زیره، رنگ‌آمیزی و دوخت کفش">
+    <title>خانه چرم | تعمیر تخصصی کفش</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --brown: #653a2a;
+            --dark-brown: #4c2a1e;
+            --cream: #ece2d6;
+            --gold: #a38a4b;
+            --light-gold: #e6ceb0;
+            --text: #45413d;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Vazirmatn", sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            width: 100%;
+            min-height: 100vh;
+            overflow-x: hidden;
+            background: var(--cream);
+            color: var(--brown);
+        }
+
+        img {
+            display: block;
+            max-width: 100%;
+        }
+
+        a {
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        /* منوی بالای سایت */
+
+        .header {
+            width: 100%;
+            background: var(--cream);
+        }
+
+        .navbar {
+            width: 100%;
+            max-width: 1200px;
+            min-height: 75px;
+            margin: 0 auto;
+            padding: 12px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo {
+            color: var(--brown);
+            font-size: 19px;
+            font-weight: 900;
+            text-decoration: none;
+            white-space: nowrap;
+        }
+
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: clamp(12px, 2vw, 25px);
+        }
+
+        .nav-links a {
+            color: var(--brown);
+            font-size: 14px;
+            font-weight: 600;
+            text-decoration: none;
+            white-space: nowrap;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--gold);
+        }
+
+        .contact-button {
+            display: inline-block;
+            padding: 9px 17px;
+            border-radius: 30px;
+            background: var(--brown);
+            color: white;
+            font-size: 13px;
+            font-weight: 800;
+            text-decoration: none;
+            white-space: nowrap;
+            transition: background 0.2s;
+        }
+
+        .contact-button:hover {
+            background: var(--dark-brown);
+        }
+
+        /* بخش معرفی */
+
+        .hero {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 35px 6% 30px;
+        }
+
+        .eyebrow {
+            margin-bottom: 12px;
+            color: var(--gold);
+            font-size: 15px;
+            font-weight: 800;
+        }
+
+        .hero h1 {
+            margin-bottom: 15px;
+            color: var(--brown);
+            font-size: clamp(25px, 3.5vw, 36px);
+            font-weight: 900;
+            line-height: 1.9;
+        }
+
+        .hero p {
+            max-width: 850px;
+            color: var(--text);
+            font-size: clamp(13px, 1.5vw, 15px);
+            font-weight: 500;
+            line-height: 2.3;
+        }
+
+        /* تصویر اصلی کفش */
+
+        .main-photo {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 4% 30px;
+        }
+
+        .photo-box {
+            width: 100%;
+            min-height: 300px;
+            padding: 20px;
+            border-radius: 30px;
+            background: var(--brown);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .shoe-image {
+            width: min(320px, 90%);
+            max-height: 300px;
+            height: auto;
+            object-fit: contain;
+            mix-blend-mode: multiply;
+        }
+
+        /* بخش مزیت‌ها */
+
+        .benefits {
+            width: 100%;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px 4% 35px;
+        }
+
+        .section-title {
+            margin-bottom: 25px;
+            color: var(--brown);
+            font-size: clamp(22px, 2.5vw, 28px);
+            font-weight: 900;
+            line-height: 1.8;
+            text-align: center;
+        }
+
+        .benefit-grid {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 18px;
+        }
+
+        .benefit-image {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+            border-radius: 22px;
+        }
+
+        /* خدمات تخصصی */
+
+        .services {
+            width: 100%;
+            padding: 0 3% 35px;
+        }
+
+        .services-panel {
+            width: 100%;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 35px 20px;
+            border-radius: 30px;
+            background: var(--brown);
+        }
+
+        .services .section-title {
+            margin-bottom: 5px;
+            color: var(--cream);
+        }
+
+        .services-subtitle {
+            margin-bottom: 30px;
+            color: #d2c4b5;
+            font-size: 13px;
+            line-height: 2;
+            text-align: center;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 15px;
+            max-width: 650px;
+            margin: 0 auto;
+        }
+
+        .service-card {
+            min-width: 0;
+            min-height: 185px;
+            padding: 15px 10px;
+            border-radius: 22px;
+            background: var(--cream);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .service-icon {
+            width: 45px;
+            height: 45px;
+            margin-bottom: 10px;
+            border-radius: 50%;
+            background: var(--light-gold);
+            color: var(--brown);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 12px;
+            font-weight: 900;
+            flex-shrink: 0;
+        }
+
+        .service-card h3 {
+            margin-bottom: 8px;
+            color: var(--brown);
+            font-size: 15px;
+            font-weight: 800;
+            line-height: 1.9;
+        }
+
+        .service-card p {
+            color: #7a756a;
+            font-size: 11px;
+            font-weight: 500;
+            line-height: 2;
+        }
+
+        .service-line {
+            width: 35%;
+            height: 3px;
+            margin-top: auto;
+            padding-top: 0;
+            border-radius: 10px;
+            background: var(--brown);
+        }
+
+        /* آدرس و ساعت کاری */
+
+        .footer {
+            width: 100%;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 35px 6% 45px;
+        }
+
+        .footer-brand {
+            margin-bottom: 10px;
+            color: var(--gold);
+            font-size: 15px;
+            font-weight: 800;
+        }
+
+        .footer h2 {
+            margin-bottom: 8px;
+            color: var(--brown);
+            font-size: 23px;
+            font-weight: 900;
+            line-height: 1.9;
+        }
+
+        .footer p {
+            margin-bottom: 25px;
+            color: var(--text);
+            font-size: 14px;
+            line-height: 2.3;
+        }
+
+        .footer p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* تنظیمات تبلت */
+
+        @media (max-width: 760px) {
+            .navbar {
+                gap: 10px;
+                padding: 12px 3%;
+            }
+
+            .logo {
+                font-size: 16px;
+            }
+
+            .nav-links {
+                gap: 12px;
+            }
+
+            .nav-links a {
+                font-size: 12px;
+            }
+
+            .contact-button {
+                padding: 8px 12px;
+                font-size: 12px;
+            }
+
+            .benefit-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 15px;
+            }
+
+            .benefit-image {
+                border-radius: 20px;
+            }
+        }
+
+        /* تنظیمات موبایل */
+
+        @media (max-width: 480px) {
+            .navbar {
+                min-height: 65px;
+                gap: 8px;
+                padding: 10px 3%;
+            }
+
+            .logo {
+                font-size: 14px;
+            }
+
+            .nav-links {
+                gap: 10px;
+            }
+
+            .nav-links a {
+                font-size: 11px;
+            }
+
+            .contact-button {
+                padding: 8px 10px;
+                font-size: 11px;
+            }
+
+            .hero {
+                padding: 25px 5% 25px;
+            }
+
+            .eyebrow {
+                font-size: 13px;
+                margin-bottom: 8px;
+            }
+
+            .hero h1 {
+                margin-bottom: 10px;
+                font-size: 23px;
+                line-height: 1.9;
+            }
+
+            .hero p {
+                font-size: 12px;
+                line-height: 2.2;
+            }
+
+            .main-photo {
+                padding: 0 4% 25px;
+            }
+
+            .photo-box {
+                min-height: 230px;
+                padding: 12px;
+                border-radius: 24px;
+            }
+
+            .shoe-image {
+                width: min(250px, 90%);
+                max-height: 215px;
+            }
+
+            .benefits {
+                padding: 15px 5% 30px;
+            }
+
+            .section-title {
+                margin-bottom: 20px;
+                font-size: 21px;
+            }
+
+            .benefit-grid {
+                gap: 12px;
+            }
+
+            .benefit-image {
+                border-radius: 17px;
+            }
+
+            .services {
+                padding: 0 3% 25px;
+            }
+
+            .services-panel {
+                padding: 27px 10px;
+                border-radius: 24px;
+            }
+
+            .services-subtitle {
+                margin-bottom: 22px;
+                font-size: 11px;
+            }
+
+            .service-grid {
+                gap: 10px;
+            }
+
+            .service-card {
+                min-height: 175px;
+                padding: 10px 5px;
+                border-radius: 17px;
+            }
+
+            .service-icon {
+                width: 40px;
+                height: 40px;
+                font-size: 11px;
+            }
+
+            .service-card h3 {
+                font-size: 12px;
+            }
+
+            .service-card p {
+                font-size: 9px;
+                line-height: 2;
+            }
+
+            .footer {
+                padding: 25px 5% 35px;
+            }
+
+            .footer h2 {
+                font-size: 21px;
+            }
+
+            .footer p {
+                font-size: 12px;
+                line-height: 2.2;
+            }
+        }
+
+        /* گوشی‌های خیلی کوچک */
+
+        @media (max-width: 360px) {
+            .navbar {
+                flex-wrap: wrap;
+                justify-content: center;
+                padding: 12px 4%;
+            }
+
+            .logo {
+                width: 100%;
+                text-align: center;
+            }
+
+            .nav-links {
+                gap: 15px;
+            }
+
+            .nav-links a {
+                font-size: 11px;
+            }
+
+            .contact-button {
+                font-size: 10px;
+                padding: 7px 9px;
+            }
+
+            .hero h1 {
+                font-size: 20px;
+            }
+
+            .service-card {
+                min-height: 180px;
+            }
+
+            .service-card h3 {
+                font-size: 11px;
+            }
+
+            .service-card p {
+                font-size: 8px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- منوی بالای سایت -->
+
+    <header class="header">
+        <nav class="navbar">
+            
+
+
+            <div class="nav-links">
+                <a href="index.html">خانه</a>
+                <a href="services.html">خدمات</a>
+                <a href="about.html">درباره ما</a>
+            </div>
+
+            <a href="in.html" class="contact-button">تماس با ما</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- بخش معرفی -->
+
+        <section class="hero">
+            <div class="eyebrow">خانه چرم</div>
+
+            <h1>تعمیر تخصصی کفش با کیفیت و با دقت </h1>
+
+            <p>
+                تعمیر پاشنه و تعویض زیره، واکس و رنگ کفش و انواع دوخت با دقت و کیفیت.
+                در میدان نبوت، پاساژ ایده‌آل، طبقه اول، واحد ۲۸ در خدمت شما هستیم.
+            </p>
+        </section>
+
+        <!-- تصویر اصلی کفش -->
+
+        <section class="main-photo">
+            <div class="photo-box">
+                <img
+                    src="photo-output.jpg"
+                    class="shoe-image"
+                    alt="نمونه کفش ترمیم‌شده در خانه چرم"
+                >
+            </div>
+        </section>
+
+        <!-- مزیت‌های خانه چرم -->
+
+        <section class="benefits">
+            <h2 class="section-title">چرا باید ما را انتخاب کنید؟</h2>
+
+            <div class="benefit-grid">
+                <img
+                    src="photo-output 6.PNG"
+                    class="benefit-image"
+                    alt="مزیت اول خدمات خانه چرم"
+                    loading="lazy"
+                >
+
+                <img
+                    src="photo-output 7.PNG"
+                    class="benefit-image"
+                    alt="مزیت دوم خدمات خانه چرم"
+                    loading="lazy"
+                >
+
+                <img
+                    src="photo-output 8.PNG"
+                    class="benefit-image"
+                    alt="مزیت سوم خدمات خانه چرم"
+                    loading="lazy"
+                >
+
+                <img
+                    src="photo-output 9.PNG"
+                    class="benefit-image"
+                    alt="مزیت چهارم خدمات خانه چرم"
+                    loading="lazy"
+                >
+            </div>
+        </section>
+
+        <!-- خدمات تخصصی -->
+
+        <section class="services" id="services">
+            <div class="services-panel">
+
+                <h2 class="section-title">خدمات تخصصی ما</h2>
+
+                <p class="services-subtitle">
+                    مراقبت حرفه‌ای، با دقت در هر جزئیات
+                </p>
+
+                <div class="service-grid">
+
+                    <article class="service-card">
+                        <div class="service-icon">چرم</div>
+                        <h3>تعمیر کفش چرمی</h3>
+                        <p>ترمیم چرم، رفع خط و خش</p>
+                        <p>و رنگ‌آمیزی تخصصی</p>
+                        <div class="service-line"></div>
+                    </article>
+
+                    <article class="service-card">
+                        <div class="service-icon">کتانی</div>
+                        <h3>تعمیر کتانی</h3>
+                        <p>ترمیم پارگی، چسباندن زیره</p>
+                        <p>و بازسازی ظاهر کفش</p>
+                        <div class="service-line"></div>
+                    </article>
+
+                    <article class="service-card">
+                        <div class="service-icon">رنگ</div>
+                        <h3>رنگ و احیا</h3>
+                        <p>بازگرداندن رنگ و زیبایی</p>
+                        <p>به کفش‌های قدیمی</p>
+                        <div class="service-line"></div>
+                    </article>
+
+                    <article class="service-card">
+                        <div class="service-icon">دوخت</div>
+                        <h3>تعویض زیره</h3>
+                        <p>افزایش دوام و استحکام</p>
+                        <p>برای مدت طولانی</p>
+                        <div class="service-line"></div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- آدرس و ساعت کاری -->
+
+    <footer class="footer" id="contact">
+        <div class="footer-brand">خانه چرم</div>
+
+        <h2>ما کجا هستیم؟</h2>
+
+        <p>
+            میدان نبوت، ضلع شمال شرقی، پاساژ ایده‌آل،
+            طبقه اول، واحد ۲۸
+        </p>
+
+        <h2>ساعت کاری</h2>
+
+        <p>۱۰ صبح تا ۹ شب</p>
+    </footer>
+</body>
+</html>
